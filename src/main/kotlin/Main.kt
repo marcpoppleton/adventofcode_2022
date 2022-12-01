@@ -1,7 +1,10 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    if(args.isEmpty()){
+        println("Usage is java -jar advent.jar day_number arguments_for_daily_challenge")
+        return
+    }
+    when(args[0].toInt()){
+        1 -> Day1().main(args)
+        else -> println("${args[0]} is not a valid day number.")
+    }
 }
