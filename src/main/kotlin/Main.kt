@@ -5,6 +5,7 @@ fun main(args: Array<String>) {
     }
     when(args[0].toInt()){
         1 -> Day1().main(args)
+        2 -> Day2().main(args)
         else -> println("${args[0]} is not a valid day number.")
     }
 }
