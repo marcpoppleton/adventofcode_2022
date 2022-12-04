@@ -1,11 +1,12 @@
 import java.io.File
+import java.nio.file.Paths
 
 interface Day {
 
 
     fun main(args: Array<String>){
         try {
-            val entries = getEntries(args[1])
+            val entries = getEntries(args[0])
             val start = System.currentTimeMillis()
             val part1 = part1(entries)
             val end = System.currentTimeMillis()
@@ -15,13 +16,20 @@ interface Day {
             val end2 = System.currentTimeMillis()
             println("Magic part 2 is : $part2 in ${end2 - start2} millis")
         } catch (e: java.io.FileNotFoundException) {
-            println("${args[1]} is not a valid file.")
+            println("${args[0]} is not a valid file.")
         }
     }
 
     fun part1(entries:List<String>):Long?
     fun part2(entries:List<String>):Long?
 
-    fun getEntries(filename: String): List<String> = File(filename).readLines()
+    fun getEntries(day: String): List<String> {
+        val filename =  Paths.get("").toAbsolutePath().toString() + "/src/main/resources/Day${day}.txt"
+        println("File to load : $filename")
+        return File(filename).readLines()
+    }
 
 }
+    fun getDay(day:String):Day{
+        return Class.forName("Day$day").newInstance() as Day
+    }

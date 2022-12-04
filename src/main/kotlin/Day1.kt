@@ -15,7 +15,7 @@ class Day1:Day {
         //We've reached the end of the file, process last line
         if (currentSum>maxSum) maxSum=currentSum
 
-        return maxSum
+         return maxSum
     }
 
     override fun part2(entries: List<String>):Long {
