@@ -5,10 +5,10 @@ import java.nio.file.Paths
 
 abstract class DayTest {
 
-    abstract val testResultPart1:Long
-    abstract val testResultPart2:Long
-    abstract val runResultPart1:Long
-    abstract val runResultPart2:Long
+    abstract val testResultPart1:Any
+    abstract val testResultPart2:Any
+    abstract val runResultPart1:Any
+    abstract val runResultPart2:Any
     abstract val day:String
 
 

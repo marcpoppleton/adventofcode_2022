@@ -20,8 +20,8 @@ interface Day {
         }
     }
 
-    fun part1(entries:List<String>):Long?
-    fun part2(entries:List<String>):Long?
+    fun part1(entries:List<String>):Any?
+    fun part2(entries:List<String>):Any?
 
     fun getEntries(day: String): List<String> {
         val filename =  Paths.get("").toAbsolutePath().toString() + "/src/main/resources/Day${day}.txt"
