@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
         4 -> Day4().main(args)
         5 -> Day5().main(args)
         6 -> Day6().main(args)
+        7 -> Day7().main(args)
         else -> println("${args[0]} is not a valid day number.")
     }
 }
